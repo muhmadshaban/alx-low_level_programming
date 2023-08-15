@@ -1,28 +1,33 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- ** main - Entry point
- **times_table - return 9 times multiplication table
- ** Return: Always  Plus  (Success)
+ ** times_table - Prints the 9 times table
+ **
+ ** Return: no return
  **/
 void times_table(void)
 {
-	int i;
+	int a, b, op;
 
-	int j;
-
-	int mult;
-
-	for (j = 0; j <= 9; j++)
+	for (a = 0; a <= 9; a++)
 {
-
-	for (i = 0;  i <= 9; i++)
+	_putchar('0');
+	for (b = 1; b <= 9; b++)
 {
-	mult = i * j;
-
-	printf("%d, ", mult);
+	op = a * b;
+	_putchar(',');
+	_putchar(' ');
+	if (op <= 9)
+{
+	_putchar(' ');
+	_putchar(op + '0');
 }
-	printf("\n");
+	else
+{
+	_putchar((op / 10) + '0');
+	_putchar((op % 10) + '0');
+}
+}
+	_putchar('\n');
 }
 }
